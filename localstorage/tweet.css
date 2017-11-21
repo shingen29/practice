@@ -1,0 +1,6 @@
+.tweetApp{
+  max-width: 375px;margin:0 auto 20px;
+}
+.tweetApp input,.tweetApp textarea,.tweetApp button{
+  margin-bottom: 10px;
+}
