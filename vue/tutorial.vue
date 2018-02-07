@@ -18,4 +18,17 @@ window.onload = function() {
       ]
     }
   });
+
+  // Event
+  new Vue({
+    el: '#event',
+    data: {
+      message: 'Hello Vue.js'
+    },
+    methods: {
+      showMessage: function() {
+        alert(this.message);
+      }
+    }
+  });
 };
