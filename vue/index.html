@@ -23,5 +23,14 @@
       <p>{{ message }}</p>
       <button v-on:click="showMessage">Click!!</button>
     </div>
+    <div id="todo">
+      <input v-model="input" v-on:keyup.enter="add">
+      <ul>
+        <li v-for="todo in todos">
+          <span>{{ todo.text }}</span>
+          <button v-on:click="remove($index)"></button>
+        </li>
+      </ul>
+    </div>
   </body>
 </html>
