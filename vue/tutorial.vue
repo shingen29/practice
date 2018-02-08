@@ -54,4 +54,16 @@ window.onload = function() {
       },
     }
   });
+
+  // Component
+  var Child = Vue.extend({
+    template: '<div>A Custom Component!</div>'
+  });
+
+  new Vue({
+    el: '#component',
+    components: {
+      'my-component': Child,
+    }
+  });
 };
