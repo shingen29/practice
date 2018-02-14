@@ -94,9 +94,11 @@ window.onload = function() {
       }
     },
     methods: {
+      /*
       updateName: function(event) {
         this.name = event.target.value;
       },
+      */
       sendData: function() {
         alert(this.name);
       }

@@ -48,7 +48,8 @@
     <div id="valid" v-bind:class="{'error': !isValid}" v-bind:style="{'border': (isValid ? '' : '1px solid red')}">
       <p>名前 {{ name }}</p>
       <p>
-        <input type="text" v-on:change="updateName($event)">
+        <!--<input type="text" v-on:change="updateName($event)">-->
+        <input v-model="name">
       </p>
       <p v-show="!isValid">
         名前を入力してください
