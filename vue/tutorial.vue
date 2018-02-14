@@ -66,4 +66,20 @@ window.onload = function() {
       'my-component': Child,
     }
   });
+
+  // computed
+  var Tax = new Vue({
+    el: '#price',
+    data: {
+      name: 'みかん',
+      price: 100,
+    },
+    computed: {
+      priceWithTax: function() {
+        return this.price * 1.08;
+      }
+    }
+  });
+  window.tax = Tax;
+
 };
