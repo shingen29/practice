@@ -92,6 +92,14 @@ window.onload = function() {
       isValid: function() {
         return this.name.length > 0;
       }
+    },
+    methods: {
+      updateName: function(event) {
+        this.name = event.target.value;
+      },
+      sendData: function() {
+        alert(this.name);
+      }
     }
   });
   window.valid = valid;
