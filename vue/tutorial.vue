@@ -82,4 +82,17 @@ window.onload = function() {
   });
   window.tax = Tax;
 
+  // isValid
+  var valid = new Vue({
+    el: '#valid',
+    data: {
+      name: '',
+    },
+    computed: {
+      isValid: function() {
+        return this.name.length > 0;
+      }
+    }
+  });
+  window.valid = valid;
 };

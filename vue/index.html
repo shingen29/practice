@@ -40,5 +40,11 @@
     <div id="price">
       <p>{{ name }}は{{ price }}円です。</p>
     </div>
+    <div id="valid">
+      <p>名前 {{ name }}</p>
+      <p v-show="!isValid">
+        名前を入力してください
+      </p>
+    </div>
   </body>
 </html>
