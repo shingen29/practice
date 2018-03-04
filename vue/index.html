@@ -61,5 +61,10 @@
     <div id="fruits-list">
       <fruits-list-parent></fruits-list-parent>
     </div>
+    <div id="fruits-component">
+      <ol>
+        <fruits-list v-for="fruits in fruitsItems" v-bind:fruits-item="fruits"></fruits-list>
+      </ol>
+    </div>
   </body>
 </html>
