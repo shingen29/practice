@@ -203,6 +203,20 @@ window.onload = function() {
     el: '#login-example'
   });
 
+  // header
+  var headerTemplate = `
+    <div style="background: red;">
+    <slot name="header"></slot>
+    </div>
+    `
+
+  Vue.component('page-header', {
+    template: headerTemplate
+  });
+
+  new Vue({
+    el: '#header-example'
+  });
 
 };
 
