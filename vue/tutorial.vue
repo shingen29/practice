@@ -1,6 +1,6 @@
 window.onload = function() {
   // Model
-  var demo = new Vue({
+  new Vue({
     el: '#demo',
     data: {
       message: 'Hello Vue'
@@ -105,6 +105,26 @@ window.onload = function() {
     }
   });
   window.valid = valid;
+
+  // component
+  var fruitsListChild = Vue.extend({
+    template: '<h1>フルーツ一覧</h1>'
+  });
+
+  var fruitsListParent = Vue.extend({
+    template: '<div>親コンポーネント<fruits-list-child></fruits-list-child></div>',
+    components: {
+      'fruits-list-child': fruitsListChild
+    }
+  });
+
+  new Vue({
+    el: "#fruits-list",
+    components: {
+      'fruits-list-parent': fruitsListParent
+    }
+  });
+
 };
 
 
