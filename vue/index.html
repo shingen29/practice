@@ -66,5 +66,11 @@
         <fruits-list v-for="fruits in fruitsItems" v-bind:fruits-item="fruits"></fruits-list>
       </ol>
     </div>
+    <div id="fruits-counter">
+      <div v-for="fruit in fruits">
+        {{fruit.name}}: <counter-button v-on:increment="increment()"></counter-button>
+      </div>
+      <p>合計: {{total}}</p>
+    </div>
   </body>
 </html>
