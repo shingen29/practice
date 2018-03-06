@@ -10,9 +10,21 @@
     <div id="app">
       <router-link to="/top">トップページ</router-link>
       <router-link to="/users">ユーザー一覧ページ</router-link>
-      <router-link :to="{ name: 'user', params: { userid: 123 } }">ユーザー詳細ページ</router-link>
+      <!--<router-link :to="{ name: 'user', params: { userid: 123 } }">ユーザー詳細ページ</router-link>-->
       <router-view></router-view>
     </div>
+<script type="x-template" id="user-list">
+<div>
+  <div class="loading" v-if="loading">ロード中...</div>
+  <div v-if="error" class="error">
+    {{ error }}
+  </div>
+  <!-- usersがロードされたら各ユーザーの名前を表示する -->
+  <div v-for="user in users" :key="user.id">
+    <h2>{{ user.name }}</h2>
+  </div>
+</div>
+</script>
     <script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/vue/2.1.10/vue.min.js"></script>
