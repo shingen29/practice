@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no">
+    <script src="https://cdn.jsdelivr.net/vue/2.1.10/vue.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/vue.router/2.3.0/vue-router.min.js"></script>
+    <script src="./spa.vue"></script>
+    <style>
+      .error {
+        color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <router-link to="/top">トップページ</router-link>
+      <router-link to="/users">ユーザー一覧ページ</router-link>
+      <router-view></router-view>
+    </div>
+  </body>
+</html>
